@@ -51,7 +51,6 @@ class App extends Component {
       }
       arr.push(element)
     }
-    console.log(arr);
     this.setState({
       toDoApp: arr
     })
@@ -71,6 +70,12 @@ class App extends Component {
       toDoApp: arr
     })
   }
+  forever = (id) => {
+    let del = this.state.toDoApp.filter(delId => delId.id !== id);
+    this.setState({
+      toDoApp: del
+    })
+  }
 
   render() {
     return (
@@ -86,7 +91,7 @@ class App extends Component {
               <div className="list">
                 <h4 className="text-center">Your Wishes</h4>
                 {this.state.toDoApp.map((val) => (
-                  <Todo wish={val.wish} id={val.id} isDone={val.isDone} onClick={(id) => this.delete(id)} click={(id) => this.restore(id)} />
+                  <Todo wish={val.wish} id={val.id} isDone={val.isDone} onClick={(id) => this.delete(id)} click={(id) => this.restore(id)} clickMe={(id) => this.forever(id)} />
                 ))}
               </div>
             </div>

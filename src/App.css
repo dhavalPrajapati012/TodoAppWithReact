@@ -25,6 +25,7 @@ input[type=text] {
     height: 35px;
     border-radius: 5px;
     display: flex;
+    overflow: hidden;
     justify-content: space-between;
     transition: all 5s;
 }
@@ -77,6 +78,14 @@ input[type=text] {
     height: 35px;
     background-color:#82C91E;
     display: none;
+}
+.perm {
+    height: 35px;
+    background-color:red;
+    display: none;
+}
+.wishlist:hover .perm {
+    display: block;
 }
 .restore {
     font-size: 20px; 
