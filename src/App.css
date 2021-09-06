@@ -1,38 +1,90 @@
-.App {
-  text-align: center;
-}
+.contain {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    max-width: 100vw;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+input[type=text] {
+    padding-left:12px;
+ }
+.mid {
+    background-color: rgb(214, 216, 219);
+    border-radius: 10px;
+    margin: 25px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.main {
+    padding: 20px;
+    height: auto;
+    width: 450px;
 }
-
-.App-link {
-  color: #61dafb;
+.wishlist {
+    background-color: rgb(255, 255, 255);
+    margin: 15px 0px;
+    height: 35px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    transition: all 5s;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.wishlist:hover {
+    background-color: #eee8e7;
+}
+.text {
+    padding: 4px 10px;
+    font-size: 18px;
+    font-weight: 500;
+}
+.wish {
+    height: 40px;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    width: 410px;
+    font-size: 18px;
+}
+.add {
+    float: right;
+    height: 40px;
+    margin-top: 10px;
+}
+.add:hover {
+    background-color: #1257be;
+}
+.list {
+    margin-top: 50px;
+}
+.error{
+    color: red;
+    font-size: smaller;
+}
+.del {
+    height: 35px;
+    background-color: red;
+    border-radius: 0px 5px 5px 0px;
+    margin:0px;
+    display: none;
+}
+.delete {
+    font-size: 20px; 
+    padding: 8px 10px;
+}
+.wishlist:hover .del {
+    display: block;
+}
+.res {
+    height: 35px;
+    background-color:#82C91E;
+    display: none;
+}
+.restore {
+    font-size: 20px; 
+    padding : 8px 10px;
+}
+.wishlist:hover .res {
+    display: block;
+}
+.re {
+    display: flex;
 }
